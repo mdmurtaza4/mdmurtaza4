@@ -16,9 +16,11 @@ Milestone 1 has been tested on a synthetic speech video in a Linux environment w
 
 ## Quick start (Windows)
 
-1. Install Python 3.11, FFmpeg (on PATH), Git and the NVIDIA driver. See the original plan for links.
-2. Check the machine: `powershell -ExecutionPolicy Bypass -File scripts\check-hardware.ps1`
-3. Set up and test the engine: `powershell -ExecutionPolicy Bypass -File scripts\setup-backend.ps1`
+1. Make sure the NVIDIA driver is up to date.
+2. Download `scripts/install.ps1` and run: `powershell -ExecutionPolicy Bypass -File install.ps1`
+   It installs Python 3.11, Git and FFmpeg via winget, downloads the project to `C:\ELiXIR-Video-Studio`,
+   sets up the engine, prints a hardware report and runs the tests. It is safe to run again.
+3. Optional detailed check: `powershell -ExecutionPolicy Bypass -File scripts\check-hardware.ps1`
 4. Process a video:
 
 ```powershell
